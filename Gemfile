@@ -28,6 +28,7 @@ gem "mini_magick", "~> 4.8"
 gem 'bulma-rails', '~> 0.7.4'
 gem 'simple_form', '~> 4.1'
 gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'stripe', '~> 4.12'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
