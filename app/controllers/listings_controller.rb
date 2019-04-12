@@ -1,4 +1,5 @@
 class ListingsController < ApplicationController
+    before_action :authorize_user!, only: [:destroy, :edit, :update] 
   def new
     @listing = Listing.new
   end
@@ -37,4 +38,9 @@ class ListingsController < ApplicationController
   def listing_params
     params.require(:listing).permit(:address, :price, :amenities, :description, :image_location)
   end
+
+  def authorize_user!
+    redirect_to root_path, alert: 'Access Denied!' unless can? :crud, @listing
+  end
 end
+

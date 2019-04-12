@@ -30,6 +30,7 @@ gem "simple_form", "~> 4.1"
 gem "devise", "~> 4.6", ">= 4.6.2"
 gem "stripe", "~> 4.12"
 gem "bootstrap"
+gem 'cancancan'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+    before_action :authorize_user!, only: [:destroy, :edit, :update] 
   def new
     @booking = Booking.new
   end
@@ -36,5 +37,9 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:payment_info, :start_date, :end_date)
+  end
+
+  def authorize_user!
+    redirect_to root_path, alert: 'Access Denied!' unless can? :crud, @booking
   end
 end
