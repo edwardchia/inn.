@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :sessions
   resources :bookings
   resources :listings 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :show, :create, :edit, :update]
   get("/", to: "welcome#home", as: :root)
 end
