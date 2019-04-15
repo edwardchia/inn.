@@ -4,6 +4,7 @@ class User < ApplicationRecord
     has_many(:bookings, dependent: :destroy)
     # has_many(:renters, through: :booking, source: :user)
 
+    has_secure_password
 
   validates :email, presence: true,
                     uniqueness: true,
