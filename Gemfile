@@ -31,6 +31,7 @@ gem "devise", "~> 4.6", ">= 4.6.2"
 gem "stripe", "~> 4.12"
 gem "bootstrap"
 gem 'cancancan'
+gem 'faker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Listing.destroy_all
+10.times do
+  Listing.create(
+    address: Faker::Address.street_name,
+    price: Faker::Number.number(3),
+    amenities: Faker::Lorem.sentences,
+    description: Faker::Lorem.sentences,
+    user_id: User.first.id,
+  )
+end

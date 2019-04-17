@@ -4,6 +4,10 @@ class ListingsController < ApplicationController
     @listing = Listing.new
   end
 
+  def index
+    @listings = Listing.all
+  end
+
   def create
     @listing = Listing.new listing_params
     @listing.user = current_user

@@ -1,0 +1,6 @@
+<h3> <%=@listing.address%> </h3>
+<small> <%= @listing.price %> </small>
+<p> <%= @listing.amenities %> </p>
+<p> <%= @listing.description %> </p>
+<%=date_field(:booking, :start_date)%>
+<%=date_field(:booking, :end_date)%>

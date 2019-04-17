@@ -1,0 +1,8 @@
+<ul class="listing-list">
+  <% @listings.each do |listing| %>
+  
+  <li><%= link_to listing.address, listing_path(listing.id)  %> 
+  </li>
+  <% end %>
+
+  </ul>
