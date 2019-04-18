@@ -1,8 +1,20 @@
-<ul class="listing-list">
+<div>
+
+
   <% @listings.each do |listing| %>
   
-  <li><%= link_to listing.address, listing_path(listing.id)  %> 
-  </li>
+<div class="card" style="width: 18rem;">
+  <% if listing.image_location %>
+    <img class="card-img-top" src="<%= asset_path(listing.image_location)%>" alt="Card image cap">
+  <% end %>
+  <div class="card-body">
+    <h5 class="card-title"> <%=listing.address%></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <%= link_to "Book Me", listing_path(listing.id), class: "btn btn-primary" %>
+
+  </div>
+</div>
   <% end %>
 
-  </ul>
+ 
+  </div>
