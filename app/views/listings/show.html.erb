@@ -1,6 +1,21 @@
-<h3> <%=@listing.address%> </h3>
-<small> <%= @listing.price %> </small>
+
+
+<div>
+
+<div class="card mb-3">
+  <% if @listing.image_location %>
+  <img class="card-img-top" src="<%= asset_path(@listing.image_location)%>" alt="Card image cap">
+  <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%=@listing.address %></h5>
+    <p class="card-text"> <p>$<%= @listing.price %> </p>
 <p> <%= @listing.amenities %> </p>
 <p> <%= @listing.description %> </p>
 <%=date_field(:booking, :start_date)%>
 <%=date_field(:booking, :end_date)%>
+    </p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+  
+</div>

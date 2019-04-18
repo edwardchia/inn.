@@ -29,9 +29,10 @@ gem "mini_magick", "~> 4.8"
 gem "simple_form", "~> 4.1"
 gem "devise", "~> 4.6", ">= 4.6.2"
 gem "stripe", "~> 4.12"
-
+gem 'font-awesome-sass'
 gem 'cancancan'
 gem 'faker'
+gem"bootstrap"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
